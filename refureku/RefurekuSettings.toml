@@ -5,6 +5,7 @@ supportedFileExtensions = [".h", ".hpp"]
 # Files contained in the directories of this list will be parsed
 toProcessDirectories = [
 #	'''Path/To/Directory/To/Parse'''
+'''./src/ECS/Components'''
 ]
 
 # Files to parse which are not included in any directory of toParseDirectories
@@ -21,7 +22,7 @@ ignoredFiles = []
 
 [CodeGenUnitSettings]
 # Generated files will be located here
-outputDirectory = '''Path/To/Output/Dir'''
+outputDirectory = '''Reflection'''
 
 generatedHeaderFileNamePattern = "##FILENAME##.rfkh.h"
 generatedSourceFileNamePattern = "##FILENAME##.rfks.h"
@@ -35,12 +36,14 @@ headerFileFooterMacroPattern = "File_##FILENAME##_GENERATED"
 
 [ParsingSettings]
 # Used c++ version (supported values are: 17, 20)
-cppVersion = 17
+cppVersion = 20
 
 # Include directories of the project
 projectIncludeDirectories = [
 #	'''Path/To/RefurekuLibrary/Include''',
 #	'''Path/To/Your/Project/Include'''
+    '''./src''',
+    '''../vendor/melon_dependencies/refureku/Include'''
 ]
 
 # Must be one of "msvc", "clang++", "g++"
@@ -58,7 +61,7 @@ shouldParseAllFields = false
 shouldParseAllFunctions = false
 shouldParseAllMethods = false
 shouldParseAllEnums = false
-shouldParseAllEnumValues = true
+shouldParseAllEnumValues = false
 
 shouldLogDiagnostic = false
 
