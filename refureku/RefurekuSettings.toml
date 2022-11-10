@@ -9,7 +9,9 @@ toProcessDirectories = [
 ]
 
 # Files to parse which are not included in any directory of toParseDirectories
-toProcessFiles = []
+toProcessFiles = [
+'''./src/ECS/Component.h'''
+]
 
 # Files contained in the directories of this list will be ignored
 ignoredDirectories = [
